@@ -1,0 +1,24 @@
+From bceb259e1d7e3f1c7a4622fd49b6fe0a3f9acd88 Mon Sep 17 00:00:00 2001
+From: ZRQ-rikkie <Z986929216@gmail.com>
+Date: Sun, 15 Oct 2023 18:00:57 +0100
+Subject: [PATCH] Fix the Clinet methods bugs
+
+---
+ client3.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/client3.py b/client3.py
+index 33166fb..d6e4887 100644
+--- a/client3.py
++++ b/client3.py
+@@ -42,6 +42,7 @@ def getDataPoint(quote):
+ def getRatio(price_a, price_b):
+     """ Get ratio of price_a and price_b """
+     """ ------------- Update this function ------------- """
++
+     if price_b == 0:
+         return
+     return price_a/price_b
+-- 
+2.39.1.windows.1
+
