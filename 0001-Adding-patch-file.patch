@@ -1,0 +1,155 @@
+From 313d126cd3c72f9ce57c9acede78043054d97af2 Mon Sep 17 00:00:00 2001
+From: ZRQ-rikkie <Z986929216@gmail.com>
+Date: Sun, 15 Oct 2023 23:36:41 +0100
+Subject: [PATCH] Adding patch file
+
+---
+ .idea/.gitignore                              |  8 +++++++
+ .idea/forage-jpmc-swe-task-1.iml              | 12 ++++++++++
+ .idea/inspectionProfiles/Project_Default.xml  |  6 +++++
+ .../inspectionProfiles/profiles_settings.xml  |  6 +++++
+ .idea/misc.xml                                |  4 ++++
+ .idea/modules.xml                             |  8 +++++++
+ .idea/vcs.xml                                 |  6 +++++
+ 0001-Fix-the-Clinet-methods-bugs.patch        | 24 +++++++++++++++++++
+ 8 files changed, 74 insertions(+)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/forage-jpmc-swe-task-1.iml
+ create mode 100644 .idea/inspectionProfiles/Project_Default.xml
+ create mode 100644 .idea/inspectionProfiles/profiles_settings.xml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 0001-Fix-the-Clinet-methods-bugs.patch
+
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+index 0000000..13566b8
+--- /dev/null
++++ b/.idea/.gitignore
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+diff --git a/.idea/forage-jpmc-swe-task-1.iml b/.idea/forage-jpmc-swe-task-1.iml
+new file mode 100644
+index 0000000..fa3ed17
+--- /dev/null
++++ b/.idea/forage-jpmc-swe-task-1.iml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="jdk" jdkName="Python 3.10 (forage-jpmc-swe-task-1)" jdkType="Python SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++  <component name="PyDocumentationSettings">
++    <option name="format" value="PLAIN" />
++    <option name="myDocStringFormat" value="Plain" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+index 0000000..03d9549
+--- /dev/null
++++ b/.idea/inspectionProfiles/Project_Default.xml
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
++  </profile>
++</component>
+\ No newline at end of file
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+index 0000000..105ce2d
+--- /dev/null
++++ b/.idea/inspectionProfiles/profiles_settings.xml
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+index 0000000..90ba53d
+--- /dev/null
++++ b/.idea/misc.xml
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (forage-jpmc-swe-task-1)" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+index 0000000..973696f
+--- /dev/null
++++ b/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/forage-jpmc-swe-task-1.iml" filepath="$PROJECT_DIR$/.idea/forage-jpmc-swe-task-1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+index 0000000..35eb1dd
+--- /dev/null
++++ b/.idea/vcs.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/0001-Fix-the-Clinet-methods-bugs.patch b/0001-Fix-the-Clinet-methods-bugs.patch
+new file mode 100644
+index 0000000..0032c43
+--- /dev/null
++++ b/0001-Fix-the-Clinet-methods-bugs.patch
+@@ -0,0 +1,24 @@
++From bceb259e1d7e3f1c7a4622fd49b6fe0a3f9acd88 Mon Sep 17 00:00:00 2001
++From: ZRQ-rikkie <Z986929216@gmail.com>
++Date: Sun, 15 Oct 2023 18:00:57 +0100
++Subject: [PATCH] Fix the Clinet methods bugs
++
++---
++ client3.py | 1 +
++ 1 file changed, 1 insertion(+)
++
++diff --git a/client3.py b/client3.py
++index 33166fb..d6e4887 100644
++--- a/client3.py
+++++ b/client3.py
++@@ -42,6 +42,7 @@ def getDataPoint(quote):
++ def getRatio(price_a, price_b):
++     """ Get ratio of price_a and price_b """
++     """ ------------- Update this function ------------- """
+++
++     if price_b == 0:
++         return
++     return price_a/price_b
++-- 
++2.39.1.windows.1
++
+-- 
+2.39.1.windows.1
+
